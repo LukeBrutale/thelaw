@@ -36,8 +36,8 @@ const config: Config = {
         white: "#FFFFFF",
       },
       fontFamily: {
-        openSans: "OpenSans",
-        playfairDisplay: "PlayfairDisplay",
+        sans: ['"Open Sans"', "sans-serif"],
+        serif: ['"Playfair Display"', "serif"],
       },
       screens: {
         sm: "375px",

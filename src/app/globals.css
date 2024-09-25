@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts//OpenSans/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 /* :root {
   --background: #ffffff;
   --foreground: #ededed;
