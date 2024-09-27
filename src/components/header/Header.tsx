@@ -4,9 +4,9 @@ export default function Header() {
   return (
     <div className="text-background-200 text-[40px] font-serif">
       Quality Always.
-      <p>
+      {/* <p>
         <SpriteSVG name="instagram" />
-      </p>
+      </p> */}
     </div>
   );
 }
