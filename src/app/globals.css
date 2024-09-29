@@ -23,6 +23,95 @@
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  color: aliceblue;
+
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+/* instagram */
+
+.custom-svg {
+  filter: grayscale(150%);
+  transition:  0.3s ease;
+  border: none;
+}
+
+.custom-svg:hover {
+  filter: grayscale(0); 
+  transition: 0.3s ease;
+ transform: scale(1.1); 
+}
+
+
+
+
+/* facebook */
+
+.custom-circle-svg {
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.custom-circle-svg circle {
+  fill: #696969; /* Початковий колір круга */
+  transition: fill 0.3s ease; /* Плавний перехід кольору */
+}
+
+.custom-circle-svg:hover circle {
+   fill: #3b5998; 
+}
+
+.custom-circle-svg:hover path {
+  fill: #ffffff; /* Наприклад, зміна кольору path на чорний */
+}
+
+.custom-circle-svg:hover {
+  transform: scale(1.1); /* Збільшення розміру при ховері */
+}
+
+
+
 
 /* :root {
   --background: #ffffff;
