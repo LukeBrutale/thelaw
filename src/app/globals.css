@@ -72,18 +72,19 @@ img {
 
 /* instagram */
 
-.custom-svg {
-  filter: grayscale(150%);
-  transition:  0.3s ease;
-  border: none;
+.instagram {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  transition:  300ms ease;
+  border-radius: 50%;
 }
 
-.custom-svg:hover {
-  filter: grayscale(0); 
-  transition: 0.3s ease;
- transform: scale(1.1); 
+.instagram:hover {
+  background: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  transform: scale(1.1);
 }
-
 
 
 

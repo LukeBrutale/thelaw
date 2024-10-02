@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import { burgerState } from "../../../state/burgerAtom";
 import { SpriteSVG } from "../../../../public/SpriteSVG";
 
-import CloseButton from "../../closeButton/CloseButton";
+import CloseButton from "@/components/closeButton/CloseButton";
 import Navigation from "../Navigation";
 import SocialMedia from "@/components/socialVedia/SocialMedia";
 
@@ -33,7 +33,7 @@ export default function BurgerMenu() {
             </div>
             <Navigation />
           </div>
-          <div className="mx-auto mb-5">
+          <div className="mx-auto mb-[100px]">
             <SocialMedia />
           </div>
         </div>

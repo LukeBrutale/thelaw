@@ -7,22 +7,6 @@ export const SpriteSVG = ({ name, className, color, height = 24, width = 24 }: {
           <path d="M70.201 58.294h-10.01v36.672H45.025V58.294h-7.213V45.406h7.213v-8.34c0-5.964 2.833-15.303 15.301-15.303l11.234.047v12.51h-8.151c-1.337 0-3.217.668-3.217 3.513v7.585h11.334l-1.325 12.876z" fill="#fff" />
         </svg>
       );
-    case "instagram":
-      return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width={width} height={height} className={className}>
-          <defs>
-            <linearGradient id="linear-gradient" x1="8" x2="506.325" y1="504" y2="5.675" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#ffcb52" />
-              <stop offset=".318" stop-color="#ff6341" />
-              <stop offset=".658" stop-color="#cd39a2" />
-              <stop offset="1" stop-color="#515bca" />
-            </linearGradient>
-          </defs>
-          <path d="M314.757 147.525H197.243a49.717 49.717 0 0 0-49.718 49.718v117.514a49.718 49.718 0 0 0 49.718 49.718h117.514a49.718 49.718 0 0 0 49.717-49.718V197.243a49.717 49.717 0 0 0-49.717-49.718ZM256 324.391A68.391 68.391 0 1 1 324.391 256 68.391 68.391 0 0 1 256 324.391Zm71.242-122.811a16.271 16.271 0 1 1 16.27-16.271 16.271 16.271 0 0 1-16.27 16.271Z" fill="url(#linear-gradient)" />
-          <path d="M256 211.545A44.455 44.455 0 1 0 300.455 256 44.455 44.455 0 0 0 256 211.545Z" fill="url(#linear-gradient)" />
-          <path d="M256 0C114.615 0 0 114.615 0 256s114.615 256 256 256 256-114.615 256-256S397.385 0 256 0Zm133.333 312.5a76.836 76.836 0 0 1-76.833 76.833h-113a76.837 76.837 0 0 1-76.834-76.833v-113a76.836 76.836 0 0 1 76.834-76.833h113a76.836 76.836 0 0 1 76.833 76.833Z" fill="url(#linear-gradient)" />
-        </svg>
-      );
     case "telegram":
       return (
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
@@ -38,7 +22,7 @@ export const SpriteSVG = ({ name, className, color, height = 24, width = 24 }: {
       );
     case "phone":
       return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={width} height={height}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={width} height={height} className={className}>
           <path d="M21.384 17.752a2.108 2.108 0 01-.522 3.359 7.543 7.543 0 01-5.476.642C10.5 20.523 3.477 13.5 2.247 8.614a7.543 7.543 0 01.642-5.476 2.108 2.108 0 013.359-.522l.922.922a2.094 2.094 0 01.445 2.328A3.877 3.877 0 018 8.2c-2.384 2.384 5.417 10.185 7.8 7.8a3.877 3.877 0 011.173-.781 2.092 2.092 0 012.328.445z" />
         </svg>
       );
@@ -54,6 +38,31 @@ export const SpriteSVG = ({ name, className, color, height = 24, width = 24 }: {
           <path d="M1082.2 896.6l410.2-410c51.5-51.5 51.5-134.6 0-186.1s-134.6-51.5-186.1 0l-410.2 410L486 300.4c-51.5-51.5-134.6-51.5-186.1 0s-51.5 134.6 0 186.1l410.2 410-410.2 410c-51.5 51.5-51.5 134.6 0 186.1 51.6 51.5 135 51.5 186.1 0l410.2-410 410.2 410c51.5 51.5 134.6 51.5 186.1 0 51.1-51.5 51.1-134.6-.5-186.2l-409.8-409.8z" fill={color} />
         </svg>
       );
+      case "map":
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width={width} height={height}  fill="#cca967">
+  <path d="M336 96 176 32 0 96v384l176-64 160 64 176-64V32L336 96zM192 72.865l128 51.2v315.069l-128-51.198V72.865zM32 118.414l128-46.545v315.9L32 434.312V118.414zm448 275.172-128 46.546v-315.9l128-46.545v315.899z"/>
+</svg>
+        );
+        case "instagram":
+          return (
+            <svg xmlns="http://www.w3.org/2000/svg"  width={width} height={height} fill={color} className={className}>
+            <path d="M11.469 5C7.918 5 5 7.914 5 11.469v9.062C5 24.082 7.914 27 11.469 27h9.062C24.082 27 27 24.086 27 20.531V11.47C27 7.918 24.086 5 20.531 5Zm0 2h9.062A4.463 4.463 0 0 1 25 11.469v9.062A4.463 4.463 0 0 1 20.531 25H11.47A4.463 4.463 0 0 1 7 20.531V11.47A4.463 4.463 0 0 1 11.469 7Zm10.437 2.188a.902.902 0 0 0-.906.906c0 .504.402.906.906.906a.902.902 0 0 0 .907-.906.902.902 0 0 0-.907-.906ZM16 10c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6Zm0 2c2.223 0 4 1.777 4 4s-1.777 4-4 4-4-1.777-4-4 1.777-4 4-4Z" />
+          </svg>
+          );
+          case "facebook2":
+            return (
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width={width}
+              height={height}
+              className={className}
+              fill={color} 
+            >
+              <path d="M30.14 2c-3.27 0-6.095.997-8.078 2.967C20.08 6.937 19 9.824 19 13.367V18h-6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6v19a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V28h7a1 1 0 0 0 .992-.875l1-8A1 1 0 0 0 37 18h-8v-4c0-1.117.883-2 2-2h6a1 1 0 0 0 1-1V3.346a1 1 0 0 0-.87-.99C36.248 2.237 33.058 2 30.14 2zm0 2c2.438 0 4.795.195 5.86.295V10h-5c-2.197 0-4 1.803-4 4v5a1 1 0 0 0 1 1h7.867l-.75 6H28a1 1 0 0 0-1 1v19h-6V27a1 1 0 0 0-1-1h-6v-6h6a1 1 0 0 0 1-1v-5.633c0-3.144.92-5.44 2.473-6.982C25.025 4.843 27.27 4 30.14 4z" />
+            </svg>
+            )
     default:
       return null;
   }

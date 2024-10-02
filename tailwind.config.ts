@@ -1,23 +1,3 @@
-// import type { Config } from "tailwindcss";
-
-// const config: Config = {
-//   content: [
-//     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         background: "var(--background)",
-//         foreground: "var(--foreground)",
-//       },
-//     },
-//   },
-//   plugins: [],
-// };
-// export default config;
-
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -33,7 +13,10 @@ const config: Config = {
         amber: {
           gold: "#cca967",
         },
-        white: "#FFFFFF",
+        text: {
+          primary: "#FFFFFF",
+          secondary: "#9f9f9f"
+        }
       },
       fontFamily: {
         sans: ['"Open Sans"', "sans-serif"],
@@ -41,7 +24,7 @@ const config: Config = {
       },
       screens: {
         sm: "375px",
-        md: "768px",
+        md: "769px",
         lg: "-1px",
         xl: "1440px",
         "2xl": "-1px",
@@ -50,23 +33,6 @@ const config: Config = {
         default: "20px",
         circle: "50%",
       },
-      // boxShadow: {
-      //   default: '2px 2px 12px 0px rgba(186, 186, 186, 0.12)',
-      // },
-      // keyframes: {
-      //   jump: {
-      //     '0%': { transform: 'translateY(0)' },
-      //     '8%': { transform: 'translateY(1px)' },
-      //     '19%': { transform: 'translateY(1.5px)' },
-      //     '50%': { transform: 'translateY(1.7px)' },
-      //     '100%': { transform: 'translateY(1.8px)' },
-      //   },
-      // },
-      // animation: {
-      //   jump: 'jump 2s cubic-bezier(0.42, 0, 0.58, 1) 1',
-      //   rotateAndTranslate:
-      //     'rotateAndTranslate 2s cubic-bezier(0.42, 0, 0.58, 1) forwards',
-      // },
       variants: {
         fill: ["hover", "focus"],
       },
