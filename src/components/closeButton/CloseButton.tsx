@@ -7,7 +7,7 @@ export default function CloseButton() {
   const [isOpen, setIsOpen] = useRecoilState(burgerState);
 
   const closeMenu = () => {
-    setIsOpen(false); // безпечніше використовувати попереднє значення
+    setIsOpen(false);
     document.body.style.overflow = "auto";
   };
 

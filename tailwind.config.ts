@@ -4,6 +4,9 @@ const config: Config = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}", "./src/modules/**/*.{js,ts,jsx,tsx,mdx}", "./src/shared/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)",
+      },
       colors: {
         background: {
           100: "#222222",
@@ -15,8 +18,8 @@ const config: Config = {
         },
         text: {
           primary: "#FFFFFF",
-          secondary: "#9f9f9f"
-        }
+          secondary: "#9f9f9f",
+        },
       },
       fontFamily: {
         sans: ['"Open Sans"', "sans-serif"],
