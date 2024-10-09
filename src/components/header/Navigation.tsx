@@ -11,14 +11,21 @@
 //     </nav>
 //   );
 // }
+"use client";
 
-import { useRouter } from "next/router";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Navigation() {
-  const router = useRouter();
+  const [currentPath, setCurrentPath] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Зберігаємо поточний шлях для активації сторінки
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   const menuItems = [
-    { label: "Головна", path: "/main" },
+    { label: "Головна", path: "/" },
     { label: "Про мене", path: "/about" },
     { label: "Практика", path: "/practice" },
     { label: "Новини", path: "/news" },
@@ -31,10 +38,9 @@ export default function Navigation() {
         {menuItems.map(item => (
           <li
             key={item.path}
-            className={`p-3 border-b-[1px] border-background-300 sm:border-b-[1px] md:border-b-0 xl:mr-4 rounded-lg transition-all duration-300 
-            ${router.pathname === item.path ? "bg-amber-gold/50 text-amber-gold" : "hover:bg-amber-gold/50 hover:text-amber-gold"}`}
-            onClick={() => router.push(item.path)}>
-            {item.label}
+            className={`p-3 border-b-[1px] border-background-300 sm:border-b-[1px] md:border-b-0 xl:mr-4 rounded-full transition-all duration-300 
+            ${currentPath === item.path ? "bg-amber-gold/20 text-amber-gold" : "hover:bg-amber-gold/50 hover:text-amber-gold"}`}>
+            <Link href={item.path}>{item.label}</Link>
           </li>
         ))}
       </ul>
