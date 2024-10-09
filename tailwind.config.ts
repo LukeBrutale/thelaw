@@ -29,7 +29,7 @@ const config: Config = {
         sm: "375px",
         md: "769px",
         lg: "-1px",
-        xl: "1440px",
+        xl: "1240px",
         "2xl": "-1px",
       },
       borderRadius: {
