@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "../container/Container";
 import Image from "next/image";
 import { SpriteSVG } from "../../../public/SpriteSVG";
@@ -26,7 +28,7 @@ export default function Header() {
               <BurgerMenu />
             </div>
           </div>
-          <div className="sm:hidden md:flex justify-between items-center p-2">
+          <div className="sm:hidden md:flex justify-between items-center p-2 xl:justify-around">
             <div className="flex">
               <SpriteSVG name="map" width={18} height={18} />
               <a href="https://www.google.com/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9A%D1%83%D1%80%D0%B5%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0,+21%D0%B3,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.492744,30.4931611,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cdf9c7ea4cdf:0x5dffd47e13f5d1b8!8m2!3d50.492744!4d30.4931611!16s%2Fg%2F11rd28wddc?entry=ttu&g_ep=EgoyMDI0MDkyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-text-secondary font-sans text-sm pl-3">

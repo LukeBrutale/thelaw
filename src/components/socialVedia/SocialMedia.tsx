@@ -1,3 +1,5 @@
+"use client";
+
 import { SpriteSVG } from "../../../public/SpriteSVG";
 
 export default function SocialMedia() {

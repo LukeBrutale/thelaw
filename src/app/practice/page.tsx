@@ -1,3 +1,3 @@
-export default function Practice() {
+export default function PagePractice() {
   return <div>Practice</div>;
 }

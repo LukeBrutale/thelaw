@@ -1,4 +1,3 @@
-// src/state/burgerAtom.ts
 import { atom } from "recoil";
 
 export const burgerState = atom({
