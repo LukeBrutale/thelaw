@@ -58,7 +58,7 @@ export default function Header() {
                 priority // Використовуйте, якщо логотип важливий
               />
             </div>
-            <div className="xl:mr-[300px]">
+            <div className="xl:mr-[300px] ">
               <Navigation />
             </div>
             <div>

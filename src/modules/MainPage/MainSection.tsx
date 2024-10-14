@@ -8,7 +8,7 @@ export default function MainSection() {
     <div className="bg-background-300">
       <Container>
         <div className="mt-10 text-center">
-          <h1 className="text-text-primary font-serif text-[30px] mb-10">
+          <h1 className="text-text-primary font-serif text-[30px] mb-10 md:text-[40px]">
             Адвокатський запит <br />–{" "}
             <span className="text-amber-gold font-serif text-[30px]">
               {" "}
