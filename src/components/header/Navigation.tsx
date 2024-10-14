@@ -48,7 +48,7 @@ export default function Navigation() {
         {/* Випадаючий список для інших сторінок */}
         <select
           onChange={handleSelectChange}
-          className="appearance-none py-2 pl-[15px] pr-[40px] border-0 rounded-full bg-amber-gold/20 text-text-secondary "
+          className="appearance-none py-2 pl-[15px] pr-[40px] border-0 rounded-full bg-amber-gold/20 text-text-secondary focus:outline-none focus:bg-amber-gold/10"
           defaultValue={currentPath ?? ""} // Якщо currentPath null, використовуємо порожній рядок
         >
           <option value="/">Головна</option>
