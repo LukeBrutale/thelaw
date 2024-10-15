@@ -4,12 +4,22 @@ import Link from "next/link";
 import { useRecoilState } from "recoil";
 // import { useRouter } from "next/router";
 import { navState } from "@/state/navAtom";
+import { selectState } from "@/state/selectAtom";
 import { useEffect } from "react";
 import { SpriteSVG } from "../../../public/SpriteSVG";
 
 export default function Navigation() {
   const [currentPath, setCurrentPath] = useRecoilState(navState);
+  const [showSelect, setShowSelect] = useRecoilState(selectState);
   // const router = useRouter();
+
+  const handleMouseDown = () => {
+    setShowSelect(true); // Відкрито
+  };
+
+  const handleBlur = () => {
+    setShowSelect(false); // Закрито
+  };
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedPath = event.target.value;
@@ -21,6 +31,9 @@ export default function Navigation() {
     if (typeof window !== "undefined") {
       // Зберігаємо поточний шлях для активації сторінки
       setCurrentPath(window.location.pathname);
+      // if (event.target instanceof HTMLSelectElement) {
+      //   event.target.blur(); // Знімаємо фокус
+      // }
     }
   }, [setCurrentPath]);
 
@@ -47,21 +60,29 @@ export default function Navigation() {
       <div className="hidden relative md:flex md:items-center xl:hidden">
         {/* Випадаючий список для інших сторінок */}
         <select
+          onMouseDown={handleMouseDown}
+          onBlur={handleBlur}
           onChange={handleSelectChange}
           className="appearance-none py-2 pl-[15px] pr-[40px] border-0 rounded-full bg-amber-gold/20 text-text-secondary focus:outline-none focus:bg-amber-gold/10"
           defaultValue={currentPath ?? ""} // Якщо currentPath null, використовуємо порожній рядок
         >
-          <option value="/">Головна</option>
+          <option value="/" className="bg-amber-gold text-background-100 focus:bg-amber-gold/10">
+            Головна
+          </option>
           {menuItems
             .filter(item => item.path !== "/")
             .map(item => (
-              <option key={item.path} value={item.path}>
+              <option key={item.path} value={item.path} className="bg-amber-gold mt-2 text-background-100 ">
                 {item.label}
               </option>
             ))}
         </select>
         <span className="absolute right-3 pointer-events-none" style={{ top: "0.655rem" }}>
-          <SpriteSVG name="dots-close" color="grey" width={20} height={20} />
+          {showSelect ? (
+            <SpriteSVG name="dots-open" color="grey" width={20} height={20} /> // Іконка для відкритого списку
+          ) : (
+            <SpriteSVG name="dots-close" color="grey" width={20} height={20} /> // Іконка для закритого списку
+          )}
         </span>
       </div>
     </nav>

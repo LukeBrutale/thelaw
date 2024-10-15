@@ -48,7 +48,7 @@ export default function Header() {
 
       <div className="sm:hidden md:block bg-background-200 ">
         <Container>
-          <div className="p-8 flex items-center md:justify-between xl:justify-start">
+          <div className="py-8 flex items-center md:justify-between xl:justify-start">
             <div className="xl:mr-20">
               <Image
                 src="/icons/logo.png"
@@ -58,7 +58,7 @@ export default function Header() {
                 priority // Використовуйте, якщо логотип важливий
               />
             </div>
-            <div className="xl:mr-[300px] ">
+            <div className="xl:mr-[300px] md:mr-10">
               <Navigation />
             </div>
             <div>
